@@ -102,6 +102,27 @@ padding:20px;
 background:black;
 opacity:0.5;
 }
+
+/* ===== ANIMATED NEON EMAIL ===== */
+a {
+  color: white;
+  text-decoration: none;
+  animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 5px white,
+                 0 0 10px white,
+                 0 0 20px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 10px white,
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff;
+  }
+}
+
 </style>
 </head>
 
@@ -124,7 +145,6 @@ opacity:0.5;
 <h2>My Showreel</h2>
 <br>
 
-<!-- REPLACE VIDEO_ID BELOW -->
 <iframe 
 src="https://www.youtube.com/embed/FzxxF6NX6S0Rdzc4" 
 frameborder="0" 
@@ -150,7 +170,11 @@ allowfullscreen>
 <section>
 <div class="glass" data-aos="fade-up">
 <h2>Contact</h2>
-<p>Email: your@email.com</p>
+<p>Email: 
+<a href="mailto:snapxeditzz0@gmail.com">
+snapxeditzz0@gmail.com
+</a>
+</p>
 </div>
 </section>
 
@@ -178,4 +202,4 @@ AOS.init();
 </script>
 
 </body>
-</html>
+  </html>
