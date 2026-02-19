@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNAPXEDITZZ | Cinematic Editor</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* ===== LOADER ===== */
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 3s forwards;
+animation-delay:2s;
+}
+
+#loader h1{
+font-size:40px;
+letter-spacing:5px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 30px white;}
+}
+
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden;}
+}
+
+/* ===== HERO ===== */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+header h1{
+font-size:60px;
+letter-spacing:4px;
+}
+
+header p{
+opacity:0.7;
+margin-top:10px;
+}
+
+/* ===== SECTIONS ===== */
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:15px;
+padding:40px;
+width:90%;
+max-width:900px;
+margin:auto;
+box-shadow:0 0 30px rgba(255,255,255,0.1);
+}
+
+video{
+width:100%;
+border-radius:15px;
+transition:0.4s;
+}
+
+video:hover{
+transform:scale(1.02);
+box-shadow:0 0 40px rgba(255,255,255,0.3);
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+opacity:0.5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+<h1>SNAPXEDITZZ</h1>
+</div>
+
+<!-- HERO -->
+<header id="particles-js">
+<h1 data-aos="fade-up">SNAPXEDITZZ</h1>
+<p data-aos="fade-up" data-aos-delay="300">Cinematic Video Editor</p>
+</header>
+
+<!-- SHOWREEL -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>My Showreel</h2>
+<br>
+<video controls>
+<source src="showreel.mp4" type="video/mp4">
+</video>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>Projects</h2>
+<br>
+<p>🎬 Gaming Montage</p>
+<p>🎬 Instagram Reels</p>
+<p>🎬 Cinematic Trailer Cut</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>Contact</h2>
+<p>Email: your@email.com</p>
+</div>
+</section>
+
+<footer>
+© 2026 SNAPXEDITZZ
+</footer>
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: { enable: true }
+  }
+});
+</script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>
