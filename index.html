@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SNAPXEDITZZ | Cinematic Editor</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-
-<!-- AOS Animation -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 <style>
@@ -92,15 +89,11 @@ margin:auto;
 box-shadow:0 0 30px rgba(255,255,255,0.1);
 }
 
-video{
+iframe{
 width:100%;
+height:500px;
 border-radius:15px;
-transition:0.4s;
-}
-
-video:hover{
-transform:scale(1.02);
-box-shadow:0 0 40px rgba(255,255,255,0.3);
+box-shadow:0 0 40px rgba(255,255,255,0.2);
 }
 
 footer{
@@ -130,9 +123,15 @@ opacity:0.5;
 <div class="glass" data-aos="fade-up">
 <h2>My Showreel</h2>
 <br>
-<video controls>
-<source src="showreel.mp4" type="video/mp4">
-</video>
+
+<!-- REPLACE VIDEO_ID BELOW -->
+<iframe 
+src="https://www.youtube.com/embed/FzxxF6NX6S0Rdzc4" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe>
+
 </div>
 </section>
 
