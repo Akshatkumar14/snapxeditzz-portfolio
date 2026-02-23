@@ -103,24 +103,46 @@ background:black;
 opacity:0.5;
 }
 
-/* ===== ANIMATED NEON EMAIL ===== */
-a {
-  color: white;
-  text-decoration: none;
-  animation: neonGlow 2s infinite alternate;
+/* ===== CONTACT BUTTON STYLE (ADDED) ===== */
+
+.contact-btn{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.4s;
+color:white;
+background:rgba(255,255,255,0.05);
 }
 
-@keyframes neonGlow {
-  from {
-    text-shadow: 0 0 5px white,
-                 0 0 10px white,
-                 0 0 20px #00ffff;
-  }
-  to {
-    text-shadow: 0 0 10px white,
-                 0 0 20px #00ffff,
-                 0 0 40px #00ffff;
-  }
+.contact-btn:hover{
+transform:scale(1.05);
+}
+
+.email-btn:hover{
+box-shadow:0 0 15px white;
+}
+
+.insta-btn:hover{
+background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+box-shadow:0 0 20px #ee2a7b;
+}
+
+.discord-btn{
+background:#5865F2;
+}
+
+.discord-btn:hover{
+box-shadow:0 0 20px #5865F2;
+}
+
+/* ===== ANIMATED NEON EMAIL ===== */
+a{
+color:white;
+text-decoration:none;
 }
 
 </style>
