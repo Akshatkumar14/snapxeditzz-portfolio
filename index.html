@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNAPXEDITZZ | Video Editor</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeOut 3s forwards;
+animation-delay:2s;
+}
+
+#loader h1{
+font-size:40px;
+letter-spacing:5px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 30px white;}
+}
+
+@keyframes fadeOut{
+to{opacity:0;visibility:hidden;}
+}
+
+/* HERO */
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+header h1{
+font-size:60px;
+letter-spacing:4px;
+}
+
+header p{
+opacity:0.7;
+margin-top:10px;
+}
+
+/* SECTIONS */
+section{
+padding:100px 20px;
+text-align:center;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:15px;
+padding:40px;
+width:90%;
+max-width:900px;
+margin:auto;
+box-shadow:0 0 30px rgba(255,255,255,0.1);
+}
+
+iframe{
+width:100%;
+height:500px;
+border-radius:15px;
+box-shadow:0 0 40px rgba(255,255,255,0.2);
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+opacity:0.5;
+}
+
+/* CONTACT BUTTONS */
+.contact-btn{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.4s;
+color:white;
+background:rgba(255,255,255,0.05);
+}
+
+.contact-btn:hover{ transform:scale(1.05); }
+.email-btn:hover{ box-shadow:0 0 15px white; }
+
+.insta-btn:hover{
+background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+box-shadow:0 0 20px #ee2a7b;
+}
+
+.discord-btn{
+background:#5865F2;
+}
+
+.discord-btn:hover{
+box-shadow:0 0 20px #5865F2;
+}
+
+/* ULTRA VIDEO MODAL */
+.modal{
+display:none;
+position:fixed;
+z-index:10000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+position:relative;
+width:90%;
+max-width:900px;
+}
+
+.modal iframe{
+width:100%;
+height:500px;
+border-radius:15px;
+}
+
+.close{
+position:absolute;
+top:-45px;
+right:0;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+a{
+color:white;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader"><h1>SNAPXEDITZZ</h1></div>
+
+<header id="particles-js">
+<h1 data-aos="fade-up">SNAPXEDITZZ</h1>
+<p data-aos="fade-up" data-aos-delay="300">Cinematic Video Editor</p>
+</header>
+
+<!-- SHOWREEL -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>My Showreel</h2><br>
+<iframe src="https://www.youtube.com/embed/j9jaKOzroMA" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>Projects</h2><br>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;">
+
+<a href="javascript:void(0);" onclick="openVideo('9oDHBP8K328')">
+<img src="https://img.youtube.com/vi/9oDHBP8K328/maxresdefault.jpg" style="width:100%;border-radius:15px;cursor:pointer;">
+</a>
+
+<a href="javascript:void(0);" onclick="openVideo('i6mMwkH6zLE')">
+<img src="https://img.youtube.com/vi/i6mMwkH6zLE/maxresdefault.jpg" style="width:100%;border-radius:15px;cursor:pointer;">
+</a>
+
+<a href="javascript:void(0);" onclick="openVideo('1cEwh7voBVw')">
+<img src="https://img.youtube.com/vi/1cEwh7voBVw/maxresdefault.jpg" style="width:100%;border-radius:15px;cursor:pointer;">
+</a>
+
+<a href="javascript:void(0);" onclick="openVideo('65dHjPHVb34')">
+<img src="https://img.youtube.com/vi/65dHjPHVb34/maxresdefault.jpg" style="width:100%;border-radius:15px;cursor:pointer;">
+</a>
+
+<a href="javascript:void(0);" onclick="openVideo('Qmt65pzyZQc')">
+<img src="https://img.youtube.com/vi/Qmt65pzyZQc/maxresdefault.jpg" style="width:100%;border-radius:15px;cursor:pointer;">
+</a>
+
+<a href="javascript:void(0);" onclick="openVideo('fsfqi9dXOAM')">
+<img src="https://img.youtube.com/vi/fsfqi9dXOAM/maxresdefault.jpg" style="width:100%;border-radius:15px;cursor:pointer;">
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>Contact</h2>
+
+<div style="display:flex;flex-direction:column;gap:25px;align-items:center;">
+
+<a href="mailto:snapxeditzz0@gmail.com" class="contact-btn email-btn">
+📧 snapxeditzz0@gmail.com
+</a>
+
+<a href="https://www.instagram.com/snapx_editzz" target="_blank" class="contact-btn insta-btn">
+📸 @snapx_editzz
+</a>
+
+<a href="https://discord.gg/_akshat_xd" target="_blank" class="contact-btn discord-btn">
+🎮 _akshat_xd
+</a>
+
+</div>
+</div>
+</section>
+
+<footer>© 2026 SNAPXEDITZZ</footer>
+
+<!-- VIDEO MODAL -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeVideo()">&times;</span>
+    <iframe id="modalVideo" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+function openVideo(id){
+document.getElementById("videoModal").style.display="flex";
+document.getElementById("modalVideo").src="https://www.youtube.com/embed/"+id+"?autoplay=1";
+}
+
+function closeVideo(){
+document.getElementById("videoModal").style.display="none";
+document.getElementById("modalVideo").src="";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{particles:{number:{value:80},size:{value:3},move:{speed:2},line_linked:{enable:true}}});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+  </html>
