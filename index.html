@@ -16,8 +16,9 @@ box-sizing:border-box;
 font-family:'Montserrat',sans-serif;
 }
 
+/* 🔥 RED + BLACK GRADIENT BACKGROUND ADDED */
 body{
-background:#0a0a0a;
+background: radial-gradient(circle at top left, #330000, #000000 60%);
 color:white;
 overflow-x:hidden;
 }
@@ -132,6 +133,30 @@ background:#5865F2;
 box-shadow:0 0 20px #5865F2;
 }
 
+/* 🔥 STATS SECTION ADDED */
+.stats-container{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h1{
+font-size:50px;
+color:#ff0000;
+text-shadow:0 0 15px #ff0000;
+}
+
+.stat p{
+margin-top:10px;
+opacity:0.8;
+}
+
 /* ULTRA VIDEO MODAL */
 .modal{
 display:none;
@@ -227,6 +252,33 @@ text-decoration:none;
 </div>
 </section>
 
+<!-- 🔥 STATS SECTION ADDED -->
+<section>
+<div class="glass" data-aos="fade-up">
+<h2>Achievements</h2>
+<br>
+
+<div class="stats-container">
+
+<div class="stat">
+<h1 class="counter" data-target="50">0</h1>
+<p>Edits Completed</p>
+</div>
+
+<div class="stat">
+<h1 class="counter" data-target="6">0</h1>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h1 class="counter" data-target="100">0</h1>
+<p>K+ Views Generated</p>
+</div>
+
+</div>
+</div>
+</section>
+
 <!-- CONTACT -->
 <section>
 <div class="glass" data-aos="fade-up">
@@ -265,11 +317,30 @@ function openVideo(id){
 document.getElementById("videoModal").style.display="flex";
 document.getElementById("modalVideo").src="https://www.youtube.com/embed/"+id+"?autoplay=1";
 }
-
 function closeVideo(){
 document.getElementById("videoModal").style.display="none";
 document.getElementById("modalVideo").src="";
 }
+</script>
+
+<!-- 🔥 COUNTER SCRIPT ADDED -->
+<script>
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+counter.innerText='0';
+const updateCounter=()=>{
+const target=+counter.getAttribute('data-target');
+const c=+counter.innerText;
+const increment=target/100;
+if(c<target){
+counter.innerText=Math.ceil(c+increment);
+setTimeout(updateCounter,20);
+}else{
+counter.innerText=target;
+}
+};
+updateCounter();
+});
 </script>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
